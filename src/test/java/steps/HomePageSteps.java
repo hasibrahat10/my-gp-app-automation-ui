@@ -1,6 +1,6 @@
 package steps;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.HomePage;
 
@@ -11,8 +11,11 @@ public class HomePageSteps extends TestSetupPage {
         new HomePage().clickGuestBtn();
 
     }
+
     @When("I will find the text {string}")
     public void i_will_find_the_text(String expectedText) {
         Assert.assertEquals(expectedText, new HomePage().homeText());
+
     }
+
 }

@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = {"src/test/java/features"},
-        tags = "@launchApp",
+        tags = "@signIn",
         glue = {"steps"},
         monochrome = true,
         plugin = {"pretty", "html:test-output"}
@@ -19,3 +19,4 @@ public class TestRunner extends AbstractTestNGCucumberTests {
         return super.scenarios();
     }
 }
+
